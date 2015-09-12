@@ -21,7 +21,7 @@ done
 #GETIMAGE="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_MPE-easternEurope.jpg"
 #GETIMAGE="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment17.jpg"
 GETIMAGE="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108EColor-easternEurope.jpg"
-STOREIMAGE="$HOME/Εικόνες/EUMetSatWallpaper.jpg"
+STOREIMAGE="$HOME/Pictures/LiveWallpaper.jpg"
 UPDATE="960" # number of seconds between updates (960 s = 16 min)
 
 # For GNOME 3. The following gsettings line sets the background image using dconf key.
