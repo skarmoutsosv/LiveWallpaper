@@ -17,12 +17,12 @@ for (( i = 0 ; i < ${#name[@]} - 1 ; i++ )); do
     kill -9 ${name[$i]}
 done
 
-#e.g. view http://oiswww.eumetsat.org/IPPS/html/latestImages.html and choose an image from there.
+#e.g. Browse http://oiswww.eumetsat.org/IPPS/html/latestImages.html and choose an image from there.
 #GETIMAGE="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_MPE-easternEurope.jpg"
 #GETIMAGE="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment17.jpg"
 GETIMAGE="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108EColor-easternEurope.jpg"
 STOREIMAGE="$HOME/Pictures/LiveWallpaper.jpg"
-UPDATE="960" # number of seconds between updates (960 s = 16 min)
+UPDATE="3600" # number of seconds between updates (960s = 16min, 3600s=1h, 10800s=3h)
 
 # For GNOME 3. The following gsettings line sets the background image using dconf key.
 gsettings set org.gnome.desktop.background picture-uri 'file://'$STOREIMAGE
@@ -37,13 +37,13 @@ while [ 1 ]; do
 		if [[ $temp > 1000 ]] 	# if image is greater than 1000 bytes
 			then 	rm $STOREIMAGE
 				mv "$STOREIMAGE.tmp" $STOREIMAGE
-				echo image is refreshed
+#				echo image is refreshed
 				break
 		fi
 		sleep 60 		# if can not get image, retry after 60 seconds
         	let COUNTER=COUNTER+1 
 	done
-	echo now I will sleep for 16 minutes
+#	echo now I will sleep for the defined time
 	sleep $UPDATE
 done
 
