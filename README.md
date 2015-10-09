@@ -1,5 +1,5 @@
 # LiveWallpaper
-A gnome 3 live wallpaper.
+A Gnome3 live wallpaper.
 It sets desktop background to a URL image which refreshes at time intervals e.g. the current weather image.
 
 Source image url, time interval and local path/filename are configurable.
