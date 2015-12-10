@@ -18,11 +18,11 @@ for (( i = 0 ; i < ${#name[@]} - 1 ; i++ )); do
 done
 
 #e.g. Browse http://oiswww.eumetsat.org/IPPS/html/latestImages.html and choose an image from there.
-#GETIMAGE="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_MPE-easternEurope.jpg"
+GETIMAGE="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_MPE-easternEurope.jpg"
 #GETIMAGE="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_RGB-12-12-9i-segment17.jpg"
-GETIMAGE="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108EColor-easternEurope.jpg"
+#GETIMAGE="http://oiswww.eumetsat.org/IPPS/html/latestImages/EUMETSAT_MSG_IR108EColor-easternEurope.jpg"
 STOREIMAGE="$HOME/Pictures/LiveWallpaper.jpg"
-UPDATE="3600" # number of seconds between updates (960s = 16min, 3600s=1h, 10800s=3h)
+UPDATE="900" # number of seconds between updates (900s = 15min, 3600s=1h, 10800s=3h)
 
 # For GNOME 3. The following gsettings line sets the background image using dconf key.
 gsettings set org.gnome.desktop.background picture-uri 'file://'$STOREIMAGE
